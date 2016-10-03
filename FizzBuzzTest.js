@@ -10,7 +10,6 @@
 	var buzz = document.getElementById("buzzOn").value;
 	
 		for(i = start; i <= end; i++){
-		
 			if(i % fizz == 0 && i % buzz == 0){
 				document.write("FizzBuzz<br>");
 			}else if(i % fizz ==0){
@@ -22,14 +21,20 @@
 		}
 	}
 
-	
 </script>
 
 <div id="testArea">
-      <h1>Count from 1 to 100, if divisible by 3, "Fizz", if divisible by 5, "Buzz".<br>
-	  If divisible by both, "FizzBuzz", otherwise just print the number</h1>
+	This program will count from "Starting Number" to "Ending Number" by one, printing out each number as it progresses<br>
+	If the number is divisible by "Print Fizz On" it will print "Fizz" to the screen<br>
+	If the number is divisible by "Print Buzz On" it will print "Buzz" to the screen<br>
+	If it is divisible by both "Print Fizz On" and "Print Buzz On" it will print "FizzBuzz" to the screen<br>
+    Fill in the fields below<br>
+	  <strong>Starting Number</strong> determines the number you start from<br>
+	  <strong>Ending Number</strong> determines the number you count to<br>
+	  <strong>Print Fizz On</strong> interval to print "Fizz"<br>
+	  <strong>Print Buzz On</strong> interval to print "Buzz"<br>
 </div>
-
+<br>
 <table>
 	<tr>
 		<td><label>Starting Number</label></td>
