@@ -3,20 +3,20 @@
 <body>
 
 <script>
-	function printFizzBuzz(){
+	function printFizzBuzz(startRange, endRange, fizzOn, buzzOn){
 
 		var printArea = "";
 
-		for(var i = 1; i <= 100; i++){
+		for(startRange; startRange <= endRange; startRange++){
 		//document.write(i);
-			if(i % 3 == 0 && i % 5 == 0){
+			if(startRange % fizzOn == 0 && startRange % buzzOn == 0){
 				printArea += "FizzBuzz, ";
-			}else if(i % 3 ==0){
+			}else if(startRange % fizzOn ==0){
 				printArea += "Fizz, ";
-			}else if(i % 5 == 0){
+			}else if(startRange % buzzOn == 0){
 				printArea += "Buzz, ";
 			}else
-				printArea += i +", ";
+				printArea += startRange +", ";
 		}
 			
 		document.write(printArea);
@@ -30,8 +30,26 @@
 	  If divisible by both, "FizzBuzz", otherwise just print the number</h1>
 </div>
 
-<button onclick="printFizzBuzz()">Click me to Run!!</button>
+<table>
+	<tr>
+		<td><label>Starting Number</label></td>
+		<td><input type="number" id="startRange"></td>
+	</tr>
+	<tr>
+		<td><label>Ending Number</label></td>
+		<td><input type="number" id="endRange"></td>
+	</tr>
+	<tr>
+		<td><label>Print Fizz On</label></td>
+		<td><input type="number" id="fizzOn"></td>
+	</tr>
+	<tr>
+		<td><label>Print Buzz On</label></td>
+		<td><input type="number" id="buzzOn"></td>
+	</tr>
+</table>
+
+<button onclick="printFizzBuzz(startRange, endRange, fizzOn, buzzOn)">Click me to Run!!</button>
 
 </body>
 </html>
-
