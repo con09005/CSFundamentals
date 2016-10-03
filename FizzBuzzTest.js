@@ -2,24 +2,24 @@
 <html>
 <body>
 
-<script>
-	function printFizzBuzz(startRange, endRange, fizzOn, buzzOn){
-
-		var printArea = "";
-
-		for(startRange; startRange <= endRange; startRange++){
-		//document.write(i);
-			if(startRange % fizzOn == 0 && startRange % buzzOn == 0){
-				printArea += "FizzBuzz, ";
-			}else if(startRange % fizzOn ==0){
-				printArea += "Fizz, ";
-			}else if(startRange % buzzOn == 0){
-				printArea += "Buzz, ";
+<script>	
+	function printFizzBuzz(){
+	var start = document.getElementById("startRange").value;
+	var end = document.getElementById("endRange").value;
+	var fizz = document.getElementById("fizzOn").value;
+	var buzz = document.getElementById("buzzOn").value;
+	
+		for(i = start; i <= end; i++){
+		
+			if(i % fizz == 0 && i % buzz == 0){
+				document.write("FizzBuzz<br>");
+			}else if(i % fizz ==0){
+				document.write("Fizz<br>");
+			}else if(i % buzz == 0){
+				document.write("Buzz<br>");
 			}else
-				printArea += startRange +", ";
+				document.write(i+"<br>");
 		}
-			
-		document.write(printArea);
 	}
 
 	
@@ -49,7 +49,9 @@
 	</tr>
 </table>
 
-<button onclick="printFizzBuzz(startRange, endRange, fizzOn, buzzOn)">Click me to Run!!</button>
+
+<button onclick="printFizzBuzz()">Click me to Run!!</button>
 
 </body>
 </html>
+
