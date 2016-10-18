@@ -4,17 +4,18 @@
 
 <script>	
 	function Reverse(){
-	var forwardString = document.getElementById("startWord").value;
 	
+	var forwardString = document.getElementById("startWord").value;
 	var splitForwardString = forwardString.split("");
 	var splitReverseString = new Array();
 	var count = 0;
-		for (i = splitForwardString.length -1; i >= 0; i--){
-			splitReverseString[count] = splitForwardString[i];
-			count++;			
-		}
+	
+	for (i = splitForwardString.length -1; i >= 0; i--){
+		splitReverseString[count] = splitForwardString[i];
+		count++;			
+	}
+	
 	var finalString = splitReverseString.join("");
-		
 	document.getElementById("reverseWord").value = finalString;
 	}
 
